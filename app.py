@@ -1,8 +1,17 @@
 from flask import Flask
+from flask import render_template
+import random
+from uploadS3 import get_file_url
+
 app = Flask(__name__)
 
 @app.route('/api/v0/random/anime/poster')
 def random_image():
-    return "<img src=image_download/image0.jpg />"
+    image = random.choice(get_file_url())
+    print("IMAGE", image)
+
+    return render_template("index.html", image=image)
 
 
+if __name__ == "__main__":  
+    app.run(debug=True)

@@ -43,7 +43,7 @@ def get_file_url():
         # print("BUCKET URL", urls)
         object_url = f"https://s3-{bucket_location['LocationConstraint']}.amazonaws.com/anitar-images/{file.key}"
         urls.append(object_url)
-    print(urls)
+    return urls
         
 
 

@@ -557,3 +557,6 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/git,venv,flask,python,visualstudio
+
+.env
+/home/key/Dev/anitar-api/.env

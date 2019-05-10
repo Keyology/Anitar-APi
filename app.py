@@ -5,7 +5,7 @@ from uploadS3 import get_file_url
 
 app = Flask(__name__)
 
-@app.route('/api/v0/random/anime/poster')
+@app.route('/')
 def random_image():
     image = random.choice(get_file_url())
     print("IMAGE", image)
